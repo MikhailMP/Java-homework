@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="FirstSuite" verbose="1" >
+    <test name="FirstTest" >
+        <classes>
+            <class name="test.java.FIrst_test" />
+        </classes>
+    </test>
+</suite>
