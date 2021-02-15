@@ -28,6 +28,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>Lesson6.xml</suiteXmlFile>
+                        <suiteXmlFile>Task1RunTests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
