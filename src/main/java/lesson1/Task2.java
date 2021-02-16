@@ -7,16 +7,34 @@ System.out.println, System.out.print можно использовать тол�
 */
 
 public class Task2 {
+    private String word;
+    private String result = "";
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
 
     public static void main(String[] args) {
-        String s = "Mikhailo";
+        Task2 task2 = new Task2();
+        task2.setWord("Mikhailo");
 
-        for (int i = 0; i < 5; i++){
-            for(int j = 0; j < 10; j++){
-                System.out.print(s + ' ');
+        String a =  task2.PrintWord(task2.getWord());
+        int stringNumberActual = a.split(" ").length;
+        System.out.println(a);
+        System.out.println(stringNumberActual);
+
+}
+    public String PrintWord(String word) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                result += word + " ";
             }
-            System.out.println();
+            result += "\n";
         }
-
+    return result;
     }
 }

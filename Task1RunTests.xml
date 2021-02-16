@@ -4,6 +4,7 @@
     <test name="Task1Tests1" >
         <classes>
             <class name="test.java.TestsTask1Lesson1" />
+            <class name="test.java.TestsTask2Lesson1" />
         </classes>
     </test>
 </suite>
