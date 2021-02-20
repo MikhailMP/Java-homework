@@ -18,7 +18,7 @@ public class Task5 {
 //        System.out.println(reverse("Hello world!!!"));
 //    }
 
-    public static String reverse(String str) {
+    public String reverse(String str) {
         char[] chars_1 = str.toCharArray();
         char[] chars_2 = new char [chars_1.length];
         int j = 0;
