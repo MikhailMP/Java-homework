@@ -22,9 +22,9 @@ public class TestsTask5Lesson1 {
     public void CheckReversString(@Optional("Рама") String someString){
         task5.setSomeString(someString);
 
-        String string = task5.reverse(task5.getSomeString());
-        String stringExpected = "умар алым амаМ";
-        String stringActual = string;
+
+        String stringExpected = "амаР";
+        String stringActual = task5.reverse(task5.getSomeString());;
 
         assertEquals(stringActual, stringExpected);
     }
