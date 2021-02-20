@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Task1Suite1" verbose="1" >
+    <test name="Task1Tests1" >
+        <parameter name="someString" value="Мама мыла раму"/>
+        <classes>
+            <class name="test.java.TestsTask1Lesson1" />
+            <class name="test.java.TestsTask2Lesson1" />
+            <class name="test.java.TestsTask5Lesson1" />
+        </classes>
+    </test>
+</suite>
