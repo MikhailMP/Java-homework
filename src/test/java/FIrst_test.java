@@ -3,7 +3,9 @@ package test.java;
 import main.java.Server;
 import org.testng.annotations.Test;
 
+import static java.lang.String.format;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class FIrst_test {
     @Test
@@ -42,5 +44,7 @@ public class FIrst_test {
 
 
         assertEquals(expectedStatus, actualdStatus);
+        int a = 11;
+        assertTrue(a > 10, "text сообщения которое будет выводится в случае падения теста");
     }
 }

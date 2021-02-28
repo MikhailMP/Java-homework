@@ -4,9 +4,9 @@
     <test name="Task1Tests1" >
         <parameter name="someString" value="Мама мыла раму"/>
         <classes>
-            <class name="test.java.TestsTask1Lesson1" />
-            <class name="test.java.TestsTask2Lesson1" />
-            <class name="test.java.TestsTask5Lesson1" />
+            <class name="test.java.JavaHomeWork.TestsTask1Lesson1" />
+            <class name="test.java.JavaHomeWork.TestsTask2Lesson1" />
+            <class name="test.java.JavaHomeWork.TestsTask5Lesson1" />
         </classes>
     </test>
 </suite>
