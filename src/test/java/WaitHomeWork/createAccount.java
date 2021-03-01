@@ -40,24 +40,31 @@ public class createAccount extends TestBaseSetup {
     String expectedAlertRePasswordField = "Type your password again";
 
     String expectedBorderColorEmptyField = "rgb(221, 0, 0)";
-
-    @BeforeMethod
-    public void BeforeWait(){
-//        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
-//        driver.manage().timeouts().pageLoadTimeout(7, TimeUnit.SECONDS);
-    }
+    
 
     @Test
     public  void CreateAccountAllFiledsIsEmpty() throws Exception{
 
+
+        wait.until(ExpectedConditions.elementToBeClickable(signInLinkLocator));
         driver.findElement(signInLinkLocator).click(); // Click on "sign In" link
+
+        wait.until(ExpectedConditions.elementToBeClickable(createAmazoneAccountLocator));
         driver.findElement(createAmazoneAccountLocator).click(); // Click on "Create your amazone account" button first page
+
+        wait.until(ExpectedConditions.elementToBeClickable(continueCreateAmazoneAccountButtonLocator));
         driver.findElement(continueCreateAmazoneAccountButtonLocator).click(); // Click on "Create your amazone account", all fields are empty
-        Thread.sleep(5000);
+
+        wait.until(ExpectedConditions.and(
+                ExpectedConditions.presenceOfElementLocated(fieldNameLocator),
+                ExpectedConditions.presenceOfElementLocated(fieldEmailLocator),
+                ExpectedConditions.presenceOfElementLocated(fieldPasswordLocator)
+        ));
 
         WebElement nameField = driver.findElement(fieldNameLocator);
-        WebElement passwordField = driver.findElement(fieldPasswordLocator);
         WebElement emailField = driver.findElement(fieldEmailLocator);
+        WebElement passwordField = driver.findElement(fieldPasswordLocator);
+
 
         String actualBorderColorNameField = nameField.getCssValue("border-color");
         String actualBorderColorEmailField = emailField.getCssValue("border-color");
@@ -83,30 +90,32 @@ public class createAccount extends TestBaseSetup {
 
     @Test
     public  void CreateAccountRePasswordIsEmpty() throws Exception{
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(signInLinkLocator));
 
+        wait.until(ExpectedConditions.elementToBeClickable(signInLinkLocator));
         driver.findElement(signInLinkLocator).click(); // Click on "sign In" link
-        wait.until(ExpectedConditions.presenceOfElementLocated(createAmazoneAccountLocator));
+
+        wait.until(ExpectedConditions.elementToBeClickable(createAmazoneAccountLocator));
         driver.findElement(createAmazoneAccountLocator).click(); // Click on "Create your amazone account" button first page
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(fieldNameLocator));
+        wait.until(ExpectedConditions.and(
+                ExpectedConditions.elementToBeClickable(fieldNameLocator),
+                ExpectedConditions.elementToBeClickable(fieldEmailLocator),
+                ExpectedConditions.elementToBeClickable(fieldPasswordLocator),
+                ExpectedConditions.presenceOfElementLocated(textAlertRePasswordFieldLocator),
+                ExpectedConditions.elementToBeClickable(continueCreateAmazoneAccountButtonLocator)
+        ));
+
         driver.findElement(fieldNameLocator).click();
         driver.findElement(fieldNameLocator).sendKeys(name);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(fieldEmailLocator));
         driver.findElement(fieldEmailLocator).click();
         driver.findElement(fieldEmailLocator).sendKeys(email);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(fieldPasswordLocator));
         driver.findElement(fieldPasswordLocator).click();
         driver.findElement(fieldPasswordLocator).sendKeys(password);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(continueCreateAmazoneAccountButtonLocator));
         driver.findElement(continueCreateAmazoneAccountButtonLocator).click(); // Click on "Create your amazone account" after filling in fields
 
-
-        //Thread.sleep(5000);
 
         WebElement nameField = driver.findElement(fieldNameLocator);
         WebElement emailField = driver.findElement(fieldEmailLocator);
