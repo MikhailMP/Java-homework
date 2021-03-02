@@ -10,7 +10,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <suiteXmlFile></suiteXmlFile>
+        <pageObjectSuite>Lesson9.xml</pageObjectSuite>
     </properties>
 
     <build>
@@ -32,8 +32,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>Lesson6.xml</suiteXmlFile>
-                        <suiteXmlFile>Task1RunTests.xml</suiteXmlFile>
+                        <suiteXmlFile>${pageObjectSuite}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
