@@ -1,0 +1,41 @@
+2021-03-09 18:52:43 ERROR SearchResultPage:49 - Error error
+2021-03-09 18:53:46 ERROR SearchResultPage:49 - Error error
+2021-03-09 19:46:05 DEBUG BasePage:16 - Creating WebDriver
+2021-03-09 19:46:05 DEBUG HomePage:17 - Initialized Home page
+2021-03-09 19:46:05 INFO  HomePage:22 - Open home page
+2021-03-09 19:46:10 DEBUG BasePage:16 - Creating WebDriver
+2021-03-09 19:46:10 DEBUG SearchResultPage:32 - Initialized Search Result page
+2021-03-09 19:46:10 INFO  HomePage:28 - Click on search field
+2021-03-09 19:46:10 INFO  HomePage:39 - Add data to search field
+2021-03-09 19:46:10 INFO  HomePage:33 - Click on search button
+2021-03-09 19:46:13 INFO  SearchResultPage:53 - Tick 'See more' for laptop`s Brands
+2021-03-09 19:46:14 FATAL SearchResultPage:56 - Fatal error
+2021-03-09 19:46:14 INFO  SearchResultPage:46 - Choosing checkBox for laptop`s Brands 
+2021-03-09 19:46:14 ERROR SearchResultPage:49 - Error error
+2021-03-09 19:46:14 INFO  SearchResultPage:37 - Creating list of elements from search request
+2021-03-09 19:46:16 WARN  SearchResultPage:41 - Warn error
+2021-03-09 19:49:14 DEBUG BasePage:16 - Creating WebDriver
+2021-03-09 19:49:14 DEBUG HomePage:17 - Initialized Home page
+2021-03-09 19:49:14 INFO  HomePage:22 - Open home page
+2021-03-09 19:49:18 DEBUG BasePage:16 - Creating WebDriver
+2021-03-09 19:49:18 DEBUG SearchResultPage:32 - Initialized Search Result page
+2021-03-09 19:49:18 INFO  HomePage:28 - Click on search field
+2021-03-09 19:49:19 INFO  HomePage:39 - Add data to search field
+2021-03-09 19:49:19 INFO  HomePage:33 - Click on search button
+2021-03-09 19:49:22 INFO  SearchResultPage:53 - Tick 'See more' for laptop`s Brands
+2021-03-09 19:49:23 FATAL SearchResultPage:56 - Fatal error
+2021-03-09 19:49:23 INFO  SearchResultPage:46 - Choosing checkBox for laptop`s Brands 
+2021-03-09 19:49:23 ERROR SearchResultPage:49 - Error error
+2021-03-09 19:49:23 INFO  SearchResultPage:37 - Creating list of elements from search request
+2021-03-09 19:49:24 WARN  SearchResultPage:41 - Warn error
+2021-03-09 19:53:33 INFO  HomePage:22 - Open home page
+2021-03-09 19:53:39 INFO  HomePage:28 - Click on search field
+2021-03-09 19:53:39 INFO  HomePage:39 - Add data to search field
+2021-03-09 19:53:39 INFO  HomePage:33 - Click on search button
+2021-03-09 19:53:44 INFO  SearchResultPage:53 - Tick 'See more' for laptop`s Brands
+2021-03-09 19:53:45 FATAL SearchResultPage:56 - Fatal error
+2021-03-09 19:53:45 INFO  SearchResultPage:46 - Choosing checkBox for laptop`s Brands 
+2021-03-09 19:53:46 ERROR SearchResultPage:49 - Error error
+2021-03-09 19:53:46 INFO  SearchResultPage:37 - Creating list of elements from search request
+2021-03-09 19:53:46 WARN  SearchResultPage:41 - Warn error
+2021-03-09 19:55:34 ERROR SearchResultPage:49 - Error error

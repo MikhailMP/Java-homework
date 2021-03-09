@@ -1,5 +1,7 @@
 package test.java.PO;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +13,7 @@ import java.util.List;
 public class SearchResultPage extends BasePage {
 
     private final By getResultLocator = By.cssSelector("span[class='a-size-medium a-color-base a-text-normal']");
-    //private final By checkBoxBrandLocator = By.xpath("//ul[@aria-labelledby='p_89-title']//span[@class='a-label a-checkbox-label']");
+    protected Logger logger = LogManager.getLogger(SearchResultPage.class);
     private final By SeeMoreBrandLocator = By.cssSelector("a[aria-label='See more, Brand']");
 
 //    private final By checkBoxHPBrandLocator = By.xpath("//li[@id= 'p_89/HP']//span");
@@ -27,28 +29,31 @@ public class SearchResultPage extends BasePage {
 
     public SearchResultPage(WebDriver driver) {
         super(driver);
+        logger.debug("Initialized Search Result page");
     }
 
 
     public List<WebElement> getElementList(){
+        logger.info("Creating list of elements from search request");
         wait.until(ExpectedConditions.presenceOfElementLocated(getResultLocator));
         List<WebElement> searchBlock = driver.findElements(getResultLocator);
+
+        logger.warn("Warn error");
         return searchBlock;
     }
 
-//    public void chooseCheckBoxBrand(){
-//        wait.until(ExpectedConditions.elementToBeClickable(checkBoxBrandLocator));
-//        driver.findElement(checkBoxBrandLocator).click();
-//    }
-
     public void chooseCheckBoxBrand(By elementLocatore){
+        logger.info("Choosing checkBox for laptop`s Brands ");
         wait.until(ExpectedConditions.elementToBeClickable(elementLocatore));
         driver.findElement(elementLocatore).click();
+        logger.error("Error error");
     }
 
     public void tickSeeMoreBrand(){
+        logger.info("Tick 'See more' for laptop`s Brands");
         wait.until(ExpectedConditions.elementToBeClickable(SeeMoreBrandLocator));
         driver.findElement(SeeMoreBrandLocator).click();
+        logger.fatal("Fatal error");
     }
 
 }
