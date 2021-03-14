@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="AddListenerHomeWork" verbose="1" >
+    <listeners>
+        <listener class-name="test.java.Helpers.TestListener"/>
+        <listener class-name="test.java.Helpers.AnnotationTransformer"/>
+        <listener class-name="test.java.Helpers.AnnatationTransformerDataProvider"/>
+    </listeners>
+    <test name="TestListener" >
+        <classes>
+            <class name="test.java.AddListenerHomeWork.CheckFilterFailed"/>
+            <class name="test.java.AddLoggerHomeWork.CheckFilter"/>
+        </classes>
+    </test>
+</suite>
