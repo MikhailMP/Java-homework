@@ -1,24 +1,20 @@
-package test.java.AddLoggerHomeWork;
+package test.java.AddListenerHomeWork;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.ITestResult;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import test.java.PO.BasePage;
+import test.java.Helpers.RetryAnalyzer;
 import test.java.PO.HomePage;
 import test.java.PO.SearchResultPage;
 import test.java.TestBaseSetup;
 
-import java.util.List;
-
 import static org.testng.Assert.assertTrue;
 
-public class CheckFilter extends TestBaseSetup {
+public class CheckFilterFailed extends TestBaseSetup {
     String laptop = "laptop";
-    //String brand = "HP";
     HomePage homePage;
     SearchResultPage searchResultPage;
 
@@ -35,7 +31,7 @@ public class CheckFilter extends TestBaseSetup {
     }
 
     @Test ()
-    public void checkLaptopBrand(String brand, By locator) {
+    public void checkLaptopBrandFailed(String brand, By locator) {
         homePage.clickSearchField();
         homePage.fillDataToSearchField(laptop);
         homePage.clickSearchButton();
@@ -44,32 +40,15 @@ public class CheckFilter extends TestBaseSetup {
         searchResultPage.chooseCheckBoxBrand(locator);
 
         for(WebElement res: searchResultPage.getElementList()){
-          assertTrue(res.getText().toLowerCase().contains(brand.toLowerCase()));
+          assertTrue(false);
         }
 
     }
 
-<<<<<<< HEAD
-    @DataProvider
-    public  Object [][] DProvider(){
-        return new Object[][]{
-                {"HP",By.xpath("//li[@id= 'p_89/HP']//span")}
-//                {"Acer", By.xpath("//li[@id= 'p_89/Acer']//span")},
-//                {"Lenovo", By.xpath("//li[@id= 'p_89/Lenovo']//span")},
-//                {"ASUS", By.xpath("//li[@id= 'p_89/ASUS']//span")},
-//                {"Dell" , By.xpath("//li[@id= 'p_89/Dell']//span")},
-//                {"Microsoft", By.xpath("//li[@id= 'p_89/Microsoft']//span")},
-//                {"Apple", By.xpath("//li[@id= 'p_89/Apple']//span")},
-//                {"CHUWI", By.xpath("//li[@id= 'p_89/CHUWI']//span")},
-//                {"Samsung", By.xpath("//li[@id= 'p_89/Samsung Electronics']//span")},
-//                {"MSI", By.xpath("//li[@id= 'p_89/MSI']//span")}
-        };
-    }
-=======
 //    @DataProvider
 //    public  Object [][] DProvider(){
 //        return new Object[][]{
-//                {"HP",By.xpath("//li[@id= 'p_89/HP']//span")}
+////                {"HP",By.xpath("//li[@id= 'p_89/HP']//span")}
 ////                {"Acer", By.xpath("//li[@id= 'p_89/Acer']//span")},
 ////                {"Lenovo", By.xpath("//li[@id= 'p_89/Lenovo']//span")},
 ////                {"ASUS", By.xpath("//li[@id= 'p_89/ASUS']//span")},
@@ -78,8 +57,7 @@ public class CheckFilter extends TestBaseSetup {
 ////                {"Apple", By.xpath("//li[@id= 'p_89/Apple']//span")},
 ////                {"CHUWI", By.xpath("//li[@id= 'p_89/CHUWI']//span")},
 ////                {"Samsung", By.xpath("//li[@id= 'p_89/Samsung Electronics']//span")},
-////                {"MSI", By.xpath("//li[@id= 'p_89/MSI']//span")}
+//                {"MSI", By.xpath("//li[@id= 'p_89/MSI']//span")}
 //        };
 //    }
->>>>>>> ListenerHomeWork
 }
